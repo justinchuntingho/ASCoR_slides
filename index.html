@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Comparative Media Dataset from Web Crawl Data</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/scipo.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<div class="withbg">
+					<h4>ASCoR Mid-Size Collaborative Research Projects Grant</h4>
+					<h3><span class="fragment">Our struggles to build the<br></span>Comparative Media Dataset from Web Crawl Data</h3>
+					<h4 style ="color:#333">Justin Chun-ting Ho, Marthe Möller,<br>Joanna Strycharz, Anne Kroon
+					</h4>
+
+					<small>Amsterdam School of Communication Research</small>
+
+					<p><img src="uvalogo.png" width="25%" style="background:none; border:none; box-shadow:none;">
+						<img src="ascorlogo.png" width="35%" style="background:none; border:none; box-shadow:none;"></p>
+					<!-- <p><b>Slides: <a href="https://edu.nl/ukqbr">https://edu.nl/ukqbr</a></b></p> -->
+
+				</div>
+			</section>
+				<section>
+					<img src="bubbletea.jpg" width="100%" style="background:none; border:none; box-shadow:none;">
+				</section>
+				<section>
+					<img src="nexis1.png" width="100%" style="background:none; border:none; box-shadow:none;">
+				</section>
+				<section>
+					<img src="nexis2.png" width="100%" style="background:none; border:none; box-shadow:none;">
+				</section>
+				<section>
+					<img src="nexis3.png" width="100%" style="background:none; border:none; box-shadow:none;">
+				</section>
+				<section data-background-size="70%" data-background="nexis4.png">
+					<div class="fragment" style="background-color:rgba(255,255,255,0.8);">
+						<h3>Also..</h3>
+						<ul>
+							<li>Rate limits after ONE request</li>
+							<li>Did I mention it returns data in PDF?</li>
+						</ul>
+						<br>&nbsp
+					</div>
+				</section>
+				<section>
+					<h3>Alternatives?</h3>
+					<p><ul>
+						<li>NexiLexis API? <em>It costs €11.850 (for 10.000 articles)</em></li>
+						<li>Webscraping? <em>Extremely time consuming</em></li>
+						<li>Existing dataset? <em>Limited data and mostly US/Europe cases</em></li>
+					</ul></p>
+				</section>
+				<section>
+					<h2>Our Proposed Solution</h2>
+				</section>
+				<section data-background-size="60%" data-background="cc.png">
+					<div class="fragment" style="background-color:rgba(255,255,255,0.9);">
+					<h3>The Comparative Media Dataset</h3>
+					<p><ul>
+						<li>Top outlets in 16 countries (5 in Europe, 5 in Asia, 5 in Americas, and 1 in Africa)</li>
+						<li>600 annotators per country</li>
+						<li>6 concepts from most cited papers in communication science (including Topic, Sentiment, Frame)</li>
+					</ul></p>
+					<br>&nbsp
+					</div>
+				</section>
+				<section>
+					<h3>Our Plan</h3>
+					<p><ol>
+						<li>Store the raw CC data in FMG-Storage</li>
+						<li>Extract the texts using SURF Research Cloud</li>
+						<li>Annotate it</li>
+					</ol></p>
+				</section>
+				<section>
+					<h2>Challenge 1</h2>
+				</section>
+				<section data-background-size="70%" data-background="ccnews.png">
+				</section>
+				<section data-background-size="70%" data-background="inbox.png">
+				</section>
+				<section data-background-size="60%" data-background="martin.png">
+					<div class="fragment" style="background-color:rgba(255,255,255,0.9);">
+					<br>&nbsp
+					<br>&nbsp
+					<p>By the way, the answer is NO</p>
+					<br>&nbsp
+					<br>&nbsp
+					</div>
+				</section>
+				<section>
+					<h3>Lesson 1:</h3>
+					<p>Cloud computing is not suitable for analysing large dataset.<br>
+					We need good old computers.</p>
+				</section>
+				<section>
+					<h2>Challenge 2</h2>
+				</section>
+				<section data-background-size="30%" data-background="thainews.png">
+				<div class="fragment" style="background-color:rgba(255,255,255,0.9);">
+					<h3>Lesson 2:</h3>
+					<p><ul>
+						<li>Very few linguistic features are universal</li>
+						<li>Many tools do not support non-latin languages</li>
+						<li>There seems to be unequal accessibility across regions*</li>
+					</ul></p>
+					<br>&nbsp
+					<br>&nbsp
+				</div>		
+				</section>
+<!-- 				<section>
+					<h3>How to draw a similar length of texts <br>across 16 countries?</h3>
+				</section>
+				<section>
+					<h3>Word/character Count?</h3>
+				</section>
+				<section>
+				<small>
+					<p>珍珠奶茶是1980年代起源於臺灣的茶類飲料，為臺灣泡沫紅茶、粉圓茶飲文化中的分支，其作法為將粉圓加入奶茶中，奶茶可以是由奶精調製；另有「珍珠紅（綠）茶」、「珍珠奶綠」等衍生種類，是臺灣最具代表性的手搖飲料之一，並從臺灣流行至世界各地。</p>
+					<p>Bubble tea (also known as pearl milk tea) is a tea-based beverage that originated in Taiwan in the 1980s. It is a branch of Taiwan's bubble tea and tapioca drink culture. The basic method involves adding tapioca pearls to milk tea, which may be made using non-dairy creamer. There are also derivative varieties such as "pearl black (or green) tea" and "pearl milk green tea." It is one of Taiwan's most iconic hand-shaken beverages and has gained popularity worldwide.</p>
+				</small>
+				</section>
+				<section>
+					<h3>Sentence?</h3>
+				</section> -->
+<!-- 				<section data-background-size="40%" data-background="thainews.png">
+				</section> -->
+<!-- 				<section>
+					<h3>It probably also affect CommonCrawl and the packages we use.</h3>
+				</section>
+				<section>
+					<h3>Lesson 2:</h3>
+					<p>Cross-country research is REALLY difficult.</p>
+				</section> -->
+				<section>
+					<h2>Challenge 3</h2>
+				</section>
+				<section>
+					<h3>How to put 12,800 articles on Qualtrics?</h3>
+				</section>
+				<section>
+					<h2>Option 1</h2>
+				</section>				
+				<section data-background-size="70%" data-background="monkeyr.gif">
+				</section>
+				<section>
+					<h2>Option 2</h2>
+				</section>	
+				<section data-background-size="40%" data-background="qualtricsapi.png">
+				</section>
+				<section data-background-size="40%" data-background="academicQualtRics.png">
+				</section>
+				<section>
+					<small>The dataset will be released in this repository, stay tuned:</small>
+					<img src="cmd.png" width="60%">
+				</section>
+
+
+
+
+				<section>
+					<h3>Special Thanks</h3>
+					<p>Qiru Huo</p>
+					<p>Dongdong Zhu</p>
+				</section>
+				<section>
+					<h2>Thank You!</h2>
+					<h4>Bluesky: @justinho.bsky.social<br>
+						Github: justinchuntingho<br>
+					Email: j.c.ho@uva.nl</h4>
+				</section>
+				</div>
+			</div>
+
+			<script src="dist/reveal.js"></script>
+			<script src="plugin/notes/notes.js"></script>
+			<script src="plugin/markdown/markdown.js"></script>
+			<script src="plugin/highlight/highlight.js"></script>
+			<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+				Reveal.initialize({
+					hash: true,
+					slideNumber: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+					plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				});
+			</script>
+		</body>
+		</html>
